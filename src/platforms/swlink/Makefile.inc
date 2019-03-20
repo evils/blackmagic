@@ -19,6 +19,10 @@ endif
 
 VPATH += platforms/stm32
 
+ifeq ($(ENABLE_BLACKPILL), 1)
+CFLAGS += -DENABLE_BLACKPILL
+endif
+
 SRC += 	cdcacm.c	\
 	usbuart.c 	\
 	serialno.c	\
